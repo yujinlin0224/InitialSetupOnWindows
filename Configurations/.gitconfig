@@ -1,0 +1,30 @@
+[alias]
+	br = branch
+	cl = clone --jobs 8 --recurse-submodules
+	cm = commit --allow-empty-message
+	co = checkout
+	st = status
+	del = ! (git branch -d $1 || git push -d origin $1) && :
+	hist = log --all --decorate --graph --oneline
+[commit]
+	gpgsign = true
+[core]
+	autocrlf = input
+	editor = code --wait
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
+[merge]
+	ff = false
+	commit = false
+[pull]
+	ff = only
+[user]
+	name = Yùjǐn Lín
+	email = yujinlin0224@outlook.com
+	signingkey = 5D048922EF80F820

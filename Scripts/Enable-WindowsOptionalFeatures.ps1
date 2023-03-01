@@ -1,0 +1,17 @@
+@(
+    "Containers"
+    "Containers-DisposableClientVM"
+    "Containers-HNS"
+    "Containers-SDN"
+    "HypervisorPlatform"
+    "Microsoft-Hyper-V"
+    "Microsoft-Hyper-V-All"
+    "Microsoft-Hyper-V-Hypervisor"
+    "Microsoft-Hyper-V-Management-Clients"
+    "Microsoft-Hyper-V-Management-PowerShell"
+    "Microsoft-Hyper-V-Services"
+    "Microsoft-Hyper-V-Tools-All"
+    "Microsoft-Windows-Subsystem-Linux"
+    "NetFx3"
+    "VirtualMachinePlatform"
+).ForEach({ Get-WindowsOptionalFeature -FeatureName $_ -Online | Enable-WindowsOptionalFeature -Online -NoRestart })
