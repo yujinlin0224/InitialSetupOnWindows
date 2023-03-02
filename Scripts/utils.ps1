@@ -26,6 +26,6 @@ function Install-MsiPackageFormUrl {
     $MsiUrl = Get-RedirectedUrl $Url
     $MsiPath = "$Env:Temp\$([System.IO.Path]::GetFileName($MsiUrl))"
     Invoke-WebRequest $Url -OutFile $MsiPath
-    Start-Process msiexec -ArgumentList "/i `"$MsiPath`" /quiet /passive" -Wait
+    Start-Process "msiexec" -ArgumentList "/i `"$MsiPath`" /quiet /passive" -Wait
     Remove-Item $MsiPath
 }

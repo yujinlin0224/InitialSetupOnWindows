@@ -4,40 +4,35 @@
 
 - C:\Users\User\AppData\Local\LINE\Data
 - C:\Users\User\AppData\Roaming\FreeFileSync
-- C:\Users\User\AppData\Roaming\rclone\rclone.conf
 - C:\Users\User\AppData\Roaming\XnViewMP\xnview.ini
-- C:\Users\User\Saved Games
+- C:\Users\User\AppData\Roaming\rclone\rclone.conf
 
-- C:\Users\User\AppData\Roaming\SoundSwitch\SoundSwitchConfiguration.json
 - C:\Users\User\AppData\Roaming\SoundSwitch\*.mp3
+- C:\Users\User\AppData\Roaming\SoundSwitch\SoundSwitchConfiguration.json
 
 - C:\Users\User\AppData\Local\qBittorrent\BT_backup
 - C:\Users\User\AppData\Roaming\qBittorrent\categories.json
-- C:\Users\User\AppData\Roaming\qBittorrent\qBittorrent.ini
 - C:\Users\User\AppData\Roaming\qBittorrent\qBittorrent-data.ini
+- C:\Users\User\AppData\Roaming\qBittorrent\qBittorrent.ini
 
-- C:\Users\User\AppData\Roaming\Google Assistant\config.json
 - C:\Users\User\AppData\Roaming\Google Assistant\client_secret_*.apps.googleusercontent.com.json
+- C:\Users\User\AppData\Roaming\Google Assistant\config.json
 - C:\Users\User\AppData\Roaming\Google Assistant\tokens.json
 
-- C:\Users\User\AppData\Roaming\foobar2000\configuration
-- C:\Users\User\AppData\Roaming\foobar2000\playlists-v*
-- C:\Users\User\AppData\Roaming\foobar2000\user-components
-- C:\Users\User\AppData\Roaming\foobar2000\index-data
-- C:\Users\User\AppData\Roaming\foobar2000\theme.fth
 - C:\Users\User\AppData\Roaming\foobar2000\*.sf*
+- C:\Users\User\AppData\Roaming\foobar2000\configuration
+- C:\Users\User\AppData\Roaming\foobar2000\index-data
+- C:\Users\User\AppData\Roaming\foobar2000\playlists-v*
+- C:\Users\User\AppData\Roaming\foobar2000\theme.fth
+- C:\Users\User\AppData\Roaming\foobar2000\user-components
 
 - C:\Program Files\Notepad++\plugins
 - C:\Users\User\AppData\Roaming\Notepad++\backup
+- C:\Users\User\AppData\Roaming\Notepad++\config.xml
 - C:\Users\User\AppData\Roaming\Notepad++\plugins
+- C:\Users\User\AppData\Roaming\Notepad++\session.xml
 - C:\Users\User\AppData\Roaming\Notepad++\themes
 - C:\Users\User\AppData\Roaming\Notepad++\userDefineLangs
-- C:\Users\User\AppData\Roaming\Notepad++\config.xml
-- C:\Users\User\AppData\Roaming\Notepad++\session.xml
-
-"C:\Users\User\AppData\Local\StarlitSeason"
-"C:\Users\User\AppData\Local\BANDAI NAMCO Entertainment"
-"C:\Users\User\AppData\Local\KOGADO"
 
 ## 1. 基本的檢查與設置
 
@@ -60,7 +55,7 @@
     > ### 特殊設置
     >
     > - 設置切換輸入法的快速鍵
-    >   1. 執行 `rundll32 Shell32.dll,Control_RunDLL input.dll,,{C07337D3-DB2C-4D0B-9A93-B722A6C106E2}{HOTKEYS}` 指令打開「文字服務和輸入語言」視窗
+    >   1. 執行 `rundll32 Shell32.dll,Control_RunDLL input.dll,,{C07337D3-DB2C-4D0B-9A93-B722A6C106E2}{HOTKEYS}` 指令，打開「文字服務和輸入語言」視窗
     >   2. 在「進階按鍵組合」分頁中設置以下快速鍵：
     >       | 動作 | 按鍵順序 |
     >       | :--- | :---: |
@@ -115,7 +110,6 @@
     > ### 特殊設置
     >
     > - 安裝「clink」時，取消勾選「Autorun when cmd.exe starts」選項即可，其他維持
-    > - 安裝「PowerShell」時，多勾選「Enable PowerShell remoting」選項即可，其他維持
 
 2. 安裝殼層描述檔，執行：
 
@@ -158,12 +152,16 @@
 2. 在Windows子系統的Ubuntu中，執行：
 
     ```sh
-    sudo apt-add-repository ppa:fish-shell/release-3 -y
+    sudo sed -i -e "s/# zh_TW.UTF-8 UTF-8/zh_TW.UTF-8 UTF-8/" /etc/locale.gen
+    sudo dpkg-reconfigure --frontend=noninteractive locales
+    sudo update-locale LANG=zh_TW.UTF-8
+
+    # sudo apt-add-repository ppa:fish-shell/release-3 -y
     sudo apt update
     sudo apt upgrade -y
     sudo apt install nala -y
-    sudo apt install fish -y
-    chsh -s /usr/bin/fish
+    # sudo apt install fish -y
+    # chsh -s /usr/bin/fish
     ```
 
 3. 在Windows子系統的Ubuntu中，於檔案`/root/.bashrc`與`~/.bashrc`後面加入：
@@ -172,6 +170,7 @@
     apt() {
       command nala "$@"
     }
+
     sudo() {
       if [ "$1" = "apt" ]; then
         shift
