@@ -1,5 +1,7 @@
 . .\utils.ps1
 
+Install-WingetPackage --id=Microsoft.DotNet.DesktopRuntime.3_1 # FIXME: required by Mica For Everyone https://github.com/MicaForEveryone/MicaForEveryone/issues/209
+
 Install-WingetPackage --id=9NBLGGH536CC # CrystalDiskMark
 Install-WingetPackage --id=9PGCV4V3BK4W # DevToys
 Install-WingetPackage --id=9NBLGGH516XP # EarTrumpet
@@ -21,7 +23,6 @@ Install-WingetPackage --id=KCSoftwares.SUMo
 Install-WingetPackage --id=LINE.LINE # has Microsoft Store version but with limited features
 Install-WingetPackage --id=Melvin-Abraham.Google-Assistant
 Install-WingetPackage --id=MicaForEveryone.MicaForEveryone --scope=machine
-Install-WingetPackage --id=Microsoft.DotNet.DesktopRuntime.3_1 # FIXME: required by Mica For Everyone https://github.com/MicaForEveryone/MicaForEveryone/issues/209
 Install-WingetPackage --id=Microsoft.PowerToys
 Install-WingetPackage --id=Nilesoft.Shell
 Install-WingetPackage --id=QL-Win.QuickLook # has Microsoft Store version but with limited features
