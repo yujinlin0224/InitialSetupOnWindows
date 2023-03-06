@@ -12,8 +12,9 @@ Install-WingetPackage --id=Logitech.LogiBolt
 Install-WingetPackage --id=Logitech.Options
 Install-WingetPackage --id=Logitech.OptionsPlus
 Install-WingetPackage --id=Microsoft.MouseandKeyboardCenter
-Install-WingetPackage --id=Nvidia.Broadcast
-Install-WingetPackage --id=Nvidia.GeForceExperience
 Install-WingetPackage --id=NZXT.CAM
+Install-WingetPackage --id=Nvidia.Broadcast
+Install-WingetPackage --id=Nvidia.CUDA
+Install-WingetPackage --id=Nvidia.GeForceExperience
 # EVGA Precision X1 # https://tw.evga.com/precisionx1/
 # NuPhy Console # https://nuphy.com/pages/nuphy-console

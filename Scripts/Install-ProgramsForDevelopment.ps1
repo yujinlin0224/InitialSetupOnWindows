@@ -2,10 +2,10 @@
 
 $WingetPackageIdOfGoLangGo = (
     winget search --id=GoLang.Go |
-    Select-String -Pattern "GoLang\.Go\.\d+\.\d+" |
-    ForEach-Object { $_.Matches.Value } |
-    Sort-Object |
-    Select-Object -Last 1
+        Select-String -Pattern "GoLang\.Go\.\d+\.\d+" |
+        ForEach-Object { $_.Matches.Value } |
+        Sort-Object |
+        Select-Object -Last 1
 )
 
 Install-WingetPackage --id=Git.Git --interactive

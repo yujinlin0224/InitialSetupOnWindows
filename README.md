@@ -2,43 +2,13 @@
 
 // 備份開始圖示 AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState\start*.bin
 
-- C:\Users\User\AppData\Local\LINE\Data
-- C:\Users\User\AppData\Roaming\FreeFileSync
-- C:\Users\User\AppData\Roaming\XnViewMP\xnview.ini
-- C:\Users\User\AppData\Roaming\rclone\rclone.conf
 
-- C:\Users\User\AppData\Roaming\SoundSwitch\*.mp3
-- C:\Users\User\AppData\Roaming\SoundSwitch\SoundSwitchConfiguration.json
-
-- C:\Users\User\AppData\Local\qBittorrent\BT_backup
-- C:\Users\User\AppData\Roaming\qBittorrent\categories.json
-- C:\Users\User\AppData\Roaming\qBittorrent\qBittorrent-data.ini
-- C:\Users\User\AppData\Roaming\qBittorrent\qBittorrent.ini
-
-- C:\Users\User\AppData\Roaming\Google Assistant\client_secret_*.apps.googleusercontent.com.json
-- C:\Users\User\AppData\Roaming\Google Assistant\config.json
-- C:\Users\User\AppData\Roaming\Google Assistant\tokens.json
-
-- C:\Users\User\AppData\Roaming\foobar2000\*.sf*
-- C:\Users\User\AppData\Roaming\foobar2000\configuration
-- C:\Users\User\AppData\Roaming\foobar2000\index-data
-- C:\Users\User\AppData\Roaming\foobar2000\playlists-v*
-- C:\Users\User\AppData\Roaming\foobar2000\theme.fth
-- C:\Users\User\AppData\Roaming\foobar2000\user-components
-
-- C:\Program Files\Notepad++\plugins
-- C:\Users\User\AppData\Roaming\Notepad++\backup
-- C:\Users\User\AppData\Roaming\Notepad++\config.xml
-- C:\Users\User\AppData\Roaming\Notepad++\plugins
-- C:\Users\User\AppData\Roaming\Notepad++\session.xml
-- C:\Users\User\AppData\Roaming\Notepad++\themes
-- C:\Users\User\AppData\Roaming\Notepad++\userDefineLangs
 
 ## 1. 基本的檢查與設置
 
-1. 檢查「Windows Update」與「Microsoft Store」是否有更新
+1. 關閉「OneDrive」的同步與個人資料夾備份
 
-2. 關閉「OneDrive」的同步與個人資料夾備份
+2. 檢查「Windows Update」與「Microsoft Store」是否有更新，有的化更新並重新啟動電腦
 
 3. 安裝驅動程式、螢幕色彩設定檔等
 
@@ -46,11 +16,18 @@
 
     - [Scripts/Install-ProgramsFromHardwareProvider.ps1](Scripts/Install-ProgramsFromHardwareProvider.ps1)
 
-5. 確保Windows授權有啟用
+5. （可選）執行系統調整腳本，以管理員身分執行：
+
+    - [Scripts/Correct-FontOfCjkCharactersInShellDialog.ps1](Scripts/Correct-FontOfCjkCharactersInShellDialog.ps1)（修正傳統對話框中的CJK字元的字體）
+    - [Scripts/Disable-IdlePowerStateOfNvidiaHdAudioDriver.ps1](Scripts/Disable-IdlePowerStateOfNvidiaHdAudioDriver.ps1)（禁用NVIDIA音效驅動的閒置電源模式）
+    - [Scripts/Make-MouseScrollingNaturally.ps1](Scripts/Make-MouseScrollingNaturally.ps1)（讓所有滑鼠使用自然的方式滾動）
+    - [Scripts/Remove-LibrariesInFileExplorer.ps1](Scripts/Remove-LibrariesInFileExplorer.ps1)（移除檔案總管中的媒體庫）
+
+6. 確保Windows授權有啟用
 
     - [國立東華大學KMS工具](https://software.ndhu.edu.tw/NDHU_KMS.exe)（選用）
 
-6. 設置「檔案總管」、「設定」與「Windows安全性」的選項
+7. 設置「檔案總管」、「設定」與「Windows安全性」的選項
 
     > ### 特殊設置
     >
@@ -73,13 +50,13 @@
     >   2. 在「硬體」分頁中按下「裝置安裝設定」按鈕，打開「裝置安裝設定」視窗
     >   3. 選擇「否（您的裝置可能無法如預期般運作）」後，按下「儲存變更」按鈕
 
-7. 設置個人資料夾的位置
+8. 設置個人資料夾的位置
 
-8. 重新啟動電腦
+9. 重新啟動電腦
 
 ## 2. 安裝與移除內建的應用程式與功能
 
-1. （可選）如果Windows是Home版本，安裝Pro有但在Home缺失的元件：
+1. （可選）如果Windows是Home版本，安裝Pro有但在Home缺失的元件，以管理員身分執行：
 
     - [Scripts/Install-MissingPackagesInWindowsHome.ps1](Scripts/Install-MissingPackagesInWindowsHome.ps1)
 
@@ -131,17 +108,18 @@
 
     - [Scripts/Install-ProgramsMainlyUsed.ps1](Scripts/Install-ProgramsMainlyUsed.ps1)
 
-2. 到「設定」的「應用程式→預設應用程式」，將安裝好的軟體設為預設的打開方式
+2. 到「設定」的「應用程式→預設應用程式」，將安裝好的軟體按表格順序設為預設的打開方式
 
     | 項目 | 預設應用程式 |
     | :---: | :--- |
+    | 網頁瀏覽器 | Firefox Developer Edition |
     | 文字編輯器 | Notepad++ |
     | 圖片瀏覽器 | XnView MP |
     | 音樂播放器 | foobar2000 |
     | 影片播放器 | MPC-HC |
-    | 網頁瀏覽器 | Firefox Developer Edition |
-    | 電子郵件 | Outlook For Windows |
-    | 壓縮檔管理 | Bandizip |
+    | 壓縮檔管理器 | Bandizip |
+    | 電子郵件客戶端 | Outlook For Windows |
+    | PDF檢視器 | Foxit PDF Reader |
 
 ## 6. 安裝Windows子系統
 
@@ -216,7 +194,7 @@
 
 3. 安裝平常使用的軟體，以管理員身分執行：
 
-    - [Scripts/Install-ProgramsCommonlyUsed](Scripts/Install-Install-ProgramsCommonlyUsed)
+    - [Scripts/Install-ProgramsCommonlyUsed.ps1](Scripts/Install-Install-ProgramsCommonlyUsed.ps1)
 
 4. （可選）安裝用於特定裝置的軟體，以管理員身分執行：
 

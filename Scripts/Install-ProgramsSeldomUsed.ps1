@@ -9,12 +9,11 @@ Install-WingetPackage --id=9MVVSZK43QQW # draw.io Diagrams
 Install-WingetPackage --id=XP8BT8DW290MPQ # Microsoft Teams (work or school)
 Install-WingetPackage --id=Audacity.Audacity
 Install-WingetPackage --id=Citrix.Workspace # has Microsoft Store version but with limited features
-Install-WingetPackage --id=Nvidia.CUDA
-Install-WingetPackage --id=id=Wagnardsoft.DisplayDriverUninstaller
+Install-WingetPackage --id=Piriform.Recuva --interactive
 Install-WingetPackage --id=PrimateLabs.Geekbench.5
 Install-WingetPackage --id=PrimateLabs.Geekbench.6
-Install-WingetPackage --id=Piriform.Recuva --interactive
 Install-WingetPackage --id=TeamViewer.TeamViewer
+Install-WingetPackage --id=Wagnardsoft.DisplayDriverUninstaller
 Install-WingetPackage --id=WinSCP.WinSCP --scope=machine
 # CheatEngine # https://www.cheatengine.org/downloads.php # FIXME: https://github.com/microsoft/winget-pkgs/issues/61767
 # FurMark # https://geeks3d.com/furmark/downloads/ # FIXME: https://github.com/microsoft/winget-pkgs/pull/93904
