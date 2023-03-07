@@ -1,3 +1,12 @@
 [submodule "ShellProfiles"]
 	path = ShellProfiles
 	url = https://github.com/yujinlin0224/ShellProfiles
+[submodule "MPC-HC_FluentUI-Toolbar"]
+	path = Modifications/MPC-HC/FluentUI-Toolbar
+	url = https://github.com/yujinlin0224/MPC-HC_FluentUI-Toolbar
+[submodule "MPC-HC_KLite-IconLibrary"]
+	path = Modifications/MPC-HC/KLite-IconLibrary
+	url = https://github.com/yujinlin0224/MPC-HC_KLite-IconLibrary
+[submodule "WaveFox"]
+	path = Modifications/Firefox/WaveFox
+	url = https://github.com/QNetITQ/WaveFox

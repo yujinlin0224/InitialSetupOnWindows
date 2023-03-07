@@ -18,12 +18,12 @@ Push-Location ~
 git clone https://github.com/flutter/flutter.git --branch stable
 Pop-Location
 
-$EdgePath = "${env:ProgramFiles(x86)}\Microsoft\Edge\Application\msedge.exe"
 $PathEnv = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
-
-$EnvPath += ";$Env:LocalAppData\Android\Sdk\platform-tools"
+$PathEnv += ";$Env:LocalAppData\Android\Sdk\platform-tools"
 $PathEnv += ";$home\flutter\bin"
 [System.Environment]::SetEnvironmentVariable("Path", $PathEnv, [System.EnvironmentVariableTarget]::User)
+
+$EdgePath = "${env:ProgramFiles(x86)}\Microsoft\Edge\Application\msedge.exe"
 [System.Environment]::SetEnvironmentVariable("CHROME_EXECUTABLE", $EdgePath, [System.EnvironmentVariableTarget]::User)
 
 Install-WingetPackage --id=Docker.DockerDesktop # install at the end due to log out automatically

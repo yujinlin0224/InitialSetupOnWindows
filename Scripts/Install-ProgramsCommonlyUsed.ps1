@@ -31,8 +31,11 @@ Install-WingetPackage --id=qBittorrent.qBittorrent
 Install-WingetPackage --id=rcmaehl.MSEdgeRedirect --scope=machine # must to install in admin mode
 # foobar2000 Free Encoder Pack # https://www.foobar2000.org/encoderpack
 # MediaInfo Lite # https://codecguide.com/download_other.htm#mediainfo
-# TrafficMonitor # https://github.com/zhongyang219/TrafficMonitor/releases
 
 $Aida64LanguageFile = "${Env:ProgramFiles(x86)}\FinalWire\AIDA64 Extreme\Language\lang_tw.txt"
 Copy-Item $Aida64LanguageFile "$Aida64LanguageFile.bak" -Force
 Get-Content "$Aida64LanguageFile.bak" -Encoding "big5" | Set-Content $Aida64LanguageFile -Encoding "utf8"
+
+$PathEnv = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+$PathEnv += ";${Env:ProgramFiles(x86)}\foobar2000\encoders"
+[System.Environment]::SetEnvironmentVariable("Path", $PathEnv, [System.EnvironmentVariableTarget]::Machine)

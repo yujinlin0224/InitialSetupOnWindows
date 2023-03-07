@@ -1,5 +1,8 @@
 $PathPatternsOfBackupData = @(
     # Firefox
+    "$Env:AppData\Mozilla\Firefox\*.default\extension-preferences.json"
+    "$Env:AppData\Mozilla\Firefox\*.default\extensions"
+    "$Env:AppData\Mozilla\Firefox\*.default\extensions.json"
     "$Env:AppData\Mozilla\Firefox\*.default\favicons.sqlite"
     "$Env:AppData\Mozilla\Firefox\*.default\formhistory.sqlite"
     "$Env:AppData\Mozilla\Firefox\*.default\places.sqlite"
@@ -16,8 +19,6 @@ $PathPatternsOfBackupData = @(
     "$Env:AppData\Notepad++\themes"
     "$Env:AppData\Notepad++\userDefineLangs"
     "$Env:ProgramFiles\Notepad++\plugins"
-    # Traffic Monitor
-    "$Env:AppData\TrafficMonitor\config.ini"
     # XnView MP
     "$Env:AppData\XnViewMP\xnview.ini"
     # rclone

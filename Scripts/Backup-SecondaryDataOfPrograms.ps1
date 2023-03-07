@@ -18,8 +18,10 @@ $PathPatternsOfBackupData = @(
     "$Env:AppData\Notepad++\backup"
     "$Env:AppData\Notepad++\session.xml"
     # SoundSwitch
-    "$Env:AppData\SoundSwitch\*.mp3"
+    "$Env:AppData\SoundSwitch\*.mp3" # FIXME: https://github.com/Belphemur/SoundSwitch/issues/1130
     "$Env:AppData\SoundSwitch\SoundSwitchConfiguration.json"
+    # Traffic Monitor
+    "$Env:AppData\TrafficMonitor\config.ini"
     # qBittorrent
     "$Env:AppData\qBittorrent\categories.json"
     "$Env:AppData\qBittorrent\qBittorrent-data.ini"
