@@ -6,5 +6,5 @@ conda update --all --yes
 conda create --name dev --yes python
 New-Item "~\.ssh" -ItemType "Directory"
 ssh-keygen -t ed25519 -f "$Home\.ssh\id_ed25519" -N ""
-Copy-item "..\Configurations\.gitconfig" "~" -Force
-Copy-item "..\Configurations\.prettierrc.yaml" "~" -Force
+Copy-item "$PSScriptRoot\..\Configurations\.gitconfig" "~" -Force
+Copy-item "$PSScriptRoot\..\Configurations\.prettierrc.yaml" "~" -Force

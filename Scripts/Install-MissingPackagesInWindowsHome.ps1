@@ -1,4 +1,4 @@
-Get-ChildItem @(
+Get-Item @(
     "$Env:SystemRoot\servicing\Packages\*-Containers-*.mum"
     "$Env:SystemRoot\servicing\Packages\Containers-*.mum"
     "$Env:SystemRoot\servicing\Packages\Microsoft-Hyper-V-*.mum"

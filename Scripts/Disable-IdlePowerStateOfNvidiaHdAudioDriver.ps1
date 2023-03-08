@@ -1,7 +1,7 @@
 Get-ChildItem `
     -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4d36e96c-e325-11ce-bfc1-08002be10318}" `
-    -ErrorAction "SilentlyContinue"
-Select-Object -ExpandProperty PSPath |
+    -ErrorAction "SilentlyContinue" |
+    Select-Object -ExpandProperty PSPath |
     Where-Object { (Get-Item $_).GetValue("Driver") -eq "nvhda64v.sys" } |
     ForEach-Object {
         $RootPath = $_

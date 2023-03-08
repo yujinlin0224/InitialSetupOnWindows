@@ -1,11 +1,11 @@
 $PathPatternsOfBackupData = @(
     # Firefox
-    "$Env:AppData\Mozilla\Firefox\*.default\extension-preferences.json"
-    "$Env:AppData\Mozilla\Firefox\*.default\extensions"
-    "$Env:AppData\Mozilla\Firefox\*.default\extensions.json"
-    "$Env:AppData\Mozilla\Firefox\*.default\favicons.sqlite"
-    "$Env:AppData\Mozilla\Firefox\*.default\formhistory.sqlite"
-    "$Env:AppData\Mozilla\Firefox\*.default\places.sqlite"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\extension-preferences.json"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\extensions"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\extensions.json"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\favicons.sqlite"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\formhistory.sqlite"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\places.sqlite"
     "$Env:AppData\Mozilla\Firefox\installs.ini"
     "$Env:AppData\Mozilla\Firefox\profiles.ini"
     # Foobar2000
@@ -28,5 +28,5 @@ $PathPatternsOfBackupData = @(
 )
 
 $PathsOfBackupData = `
-    Get-ChildItem $PathPatternsOfBackupData -Recurse -ErrorAction "SilentlyContinue" |
+    Get-Item $PathPatternsOfBackupData -ErrorAction "SilentlyContinue" |
     ForEach-Object { $_.FullName }

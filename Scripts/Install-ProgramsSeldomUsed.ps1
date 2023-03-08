@@ -19,3 +19,4 @@ Install-WingetPackage --id=WinSCP.WinSCP --scope=machine
 # FurMark # https://geeks3d.com/furmark/downloads/ # FIXME: https://github.com/microsoft/winget-pkgs/pull/93904
 # GoPro VR Player # https://mega.nz/file/81k0HAjI#RfLERA6vXyWGKU7q37e4qQvXfFQ6PFiqy01b85lsNgI
 # Ivanti Secure Access Client # https://ndhu.twaren.net # VPN to NDHU
+# Locale Remulator # https://github.com/InWILL/Locale_Remulator

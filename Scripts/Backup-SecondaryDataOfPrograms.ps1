@@ -1,8 +1,8 @@
 $PathPatternsOfBackupData = @(
     # Firefox
-    "$Env:AppData\Mozilla\Firefox\*.default\cookies.sqlite"
-    "$Env:AppData\Mozilla\Firefox\*.default\permissions.sqlite"
-    "$Env:AppData\Mozilla\Firefox\*.default\sessionstore.jsonlz4"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\cookies.sqlite"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\permissions.sqlite"
+    "$Env:AppData\Mozilla\Firefox\Profiles\*.default\sessionstore.jsonlz4"
     # FreeFileSync
     "$Env:AppData\FreeFileSync"
     # Foobar2000
@@ -22,6 +22,7 @@ $PathPatternsOfBackupData = @(
     "$Env:AppData\SoundSwitch\SoundSwitchConfiguration.json"
     # Traffic Monitor
     "$Env:AppData\TrafficMonitor\config.ini"
+    "$Env:LocalAppData\\TrafficMonitor\global_cfg.ini"
     # qBittorrent
     "$Env:AppData\qBittorrent\categories.json"
     "$Env:AppData\qBittorrent\qBittorrent-data.ini"
@@ -29,5 +30,5 @@ $PathPatternsOfBackupData = @(
 )
 
 $PathsOfBackupData = `
-    Get-ChildItem $PathPatternsOfBackupData -Recurse -ErrorAction "SilentlyContinue" |
+    Get-Item $PathPatternsOfBackupData -ErrorAction "SilentlyContinue" |
     ForEach-Object { $_.FullName }

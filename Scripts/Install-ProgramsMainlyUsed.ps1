@@ -8,4 +8,11 @@ Install-WingetPackage --id=XnSoft.XnViewMP
 Install-WingetPackage --id=clsid2.mpc-hc
 Install-MsiPackageFormUrl "https://download.mozilla.org/?product=firefox-devedition-msi-latest-ssl&os=win64&lang=zh-TW" # Install-WingetPackage --id=Mozilla.Firefox.DeveloperEdition --locale=zh-TW # FIXME: https://github.com/microsoft/winget-pkgs/issues/97773
 Install-WingetPackage --id=Foxit.FoxitReader --interactive
-# Locale Remulator # https://github.com/InWILL/Locale_Remulator
+
+Get-Item "$Env:AppData\Mozilla\Firefox\Profiles\*.default" | ForEach-Object {
+    Copy-Item "$PSScriptRoot\..\Modifications\Firefox\WaveFox\chrome" $_ -Force -Recurse # FIXME: https://github.com/QNetITQ/WaveFox/issues/119
+    Copy-Item "$PSScriptRoot\..\Modifications\Firefox\user.js" $_ -Force
+}
+
+& "$PSScriptRoot\..\Modifications\MPC-HC\FluentUI-Toolbar\install.bat"
+& "$PSScriptRoot\..\Modifications\MPC-HC\KLite-IconLibrary\install.bat"
