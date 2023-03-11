@@ -15,7 +15,7 @@ Install-WingetPackage --id=PrimateLabs.Geekbench.6
 Install-WingetPackage --id=TeamViewer.TeamViewer
 Install-WingetPackage --id=Wagnardsoft.DisplayDriverUninstaller
 Install-WingetPackage --id=WinSCP.WinSCP --scope=machine
-# CheatEngine # https://www.cheatengine.org/downloads.php # FIXME: https://github.com/microsoft/winget-pkgs/issues/61767
+Invoke-ProgramFromWebpageWithUrlPattern "https://www.cheatengine.org/downloads.php" "https://*.cloudfront.net/installer/*" # FIXME: https://github.com/microsoft/winget-pkgs/issues/61767
 # FurMark # https://geeks3d.com/furmark/downloads/ # FIXME: https://github.com/microsoft/winget-pkgs/pull/93904
 # GoPro VR Player # https://mega.nz/file/81k0HAjI#RfLERA6vXyWGKU7q37e4qQvXfFQ6PFiqy01b85lsNgI
 # Ivanti Secure Access Client # https://ndhu.twaren.net # VPN to NDHU

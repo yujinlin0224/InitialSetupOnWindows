@@ -29,12 +29,28 @@ Install-WingetPackage --id=Surfshark.Surfshark
 Install-WingetPackage --id=gurnec.HashCheckShellExtension
 Install-WingetPackage --id=qBittorrent.qBittorrent
 Install-WingetPackage --id=rcmaehl.MSEdgeRedirect --scope=machine # must to install in admin mode
-# foobar2000 Free Encoder Pack # https://www.foobar2000.org/encoderpack
-# MediaInfo Lite # https://codecguide.com/download_other.htm#mediainfo
+Invoke-ProgramFromWebpageWithUrlPattern "https://www.foobar2000.org/encoderpack" "/getfile/Free_Encoder_Pack-*.exe" "/getfile" "/files" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98378
+Invoke-ProgramFromWebpageWithUrlPattern "https://codecguide.com/download_other.htm#mediainfo" "https://files*.codecguide.com/MediaInfoLite*.exe" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98379
+# TrafficMonitor # https://github.com/zhongyang219/TrafficMonitor/releases
 
 $Aida64LanguageFile = "${Env:ProgramFiles(x86)}\FinalWire\AIDA64 Extreme\Language\lang_tw.txt"
 Copy-Item $Aida64LanguageFile "$Aida64LanguageFile.bak" -Force
 Get-Content "$Aida64LanguageFile.bak" -Encoding "big5" | Set-Content $Aida64LanguageFile -Encoding "utf8"
+
+# https://github.com/Cologler/QuickLook.Plugin.TorrentViewer/blob/master/README.md#how-to-use
+$QuickLookConfigFile = "$Env:LocalAppData\Programs\QuickLook\QuickLook.exe.config"
+$QuickLookConfigFileContent = [xml](Get-Content $QuickLookConfigFile)
+$QuickLookConfigFileContent.SelectSingleNode("/configuration/runtime").AppendChild(
+    $QuickLookConfigFileContent.ImportNode(([xml]'
+        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+        <dependentAssembly>
+            <assemblyIdentity name="System.Buffers" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+            <bindingRedirect oldVersion="0.0.0.0-4.0.3.0" newVersion="4.0.3.0"/>
+        </dependentAssembly>
+        </assemblyBinding>
+    ').DocumentElement, $true)
+)
+$QuickLookConfigFileContent.Save($QuickLookConfigFile)
 
 $PathEnv = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
 $PathEnv += ";${Env:ProgramFiles(x86)}\foobar2000\encoders"

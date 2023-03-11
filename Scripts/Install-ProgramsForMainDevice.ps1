@@ -5,6 +5,5 @@ Install-WingetPackage --id=AndreWiethoff.ExactAudioCopy
 Install-WingetPackage --id=AntoineAflalo.SoundSwitch --scope=machine
 Install-WingetPackage --id=EFF.Certbot
 Install-WingetPackage --id=Melvin-Abraham.Google-Assistant
-# CyberPower PowerPanel Business Local # https://www.cyberpowersystems.com/product/software/power-panel-business/powerpanel-business-windows/
-# FreeFileSync # https://freefilesync.org/download.php # FIXME: https://github.com/microsoft/winget-pkgs/pull/15309
-# TrafficMonitor # https://github.com/zhongyang219/TrafficMonitor/releases
+Invoke-ProgramFromWebpageWithUrlPattern "https://www.cyberpowersystems.com/product/software/power-panel-business/powerpanel-business-windows/" "https://*.cloudfront.net/software/PPB_Windows_v*.exe" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98381
+Invoke-ProgramFromWebpageWithUrlPattern "https://freefilesync.org/download.php" "/download/FreeFileSync_*_Windows_Setup.exe" # FIXME: https://github.com/microsoft/winget-pkgs/pull/15309

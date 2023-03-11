@@ -16,5 +16,5 @@ Install-WingetPackage --id=NZXT.CAM
 Install-WingetPackage --id=Nvidia.Broadcast
 Install-WingetPackage --id=Nvidia.CUDA
 Install-WingetPackage --id=Nvidia.GeForceExperience
-# EVGA Precision X1 # https://tw.evga.com/precisionx1/
+# EVGA Precision X1 # https://tw.evga.com/precisionx1/ # FIXME: https://github.com/microsoft/winget-pkgs/issues/7899
 # NuPhy Console # https://nuphy.com/pages/nuphy-console

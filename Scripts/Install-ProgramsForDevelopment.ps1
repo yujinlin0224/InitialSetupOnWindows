@@ -24,6 +24,8 @@ $PathEnv += ";$home\flutter\bin"
 [System.Environment]::SetEnvironmentVariable("Path", $PathEnv, [System.EnvironmentVariableTarget]::User)
 
 $EdgePath = "${env:ProgramFiles(x86)}\Microsoft\Edge\Application\msedge.exe"
-[System.Environment]::SetEnvironmentVariable("CHROME_EXECUTABLE", $EdgePath, [System.EnvironmentVariableTarget]::User)
+@("CHROME_PATH", "CHROME_EXECUTABLE") | ForEach-Object {
+    [System.Environment]::SetEnvironmentVariable($_, $EdgePath, [System.EnvironmentVariableTarget]::Machine)
+}
 
 Install-WingetPackage --id=Docker.DockerDesktop # install at the end due to log out automatically
