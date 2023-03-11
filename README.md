@@ -42,7 +42,7 @@
     - [Scripts/Remove-LibrariesInFileExplorer.ps1](Scripts/Remove-LibrariesInFileExplorer.ps1)（移除檔案總管中的媒體庫）
 
 6. 確保Windows授權有啟用
-    - [國立東華大學KMS工具](https://software.ndhu.edu.tw/NDHU_KMS.exe)（選用）
+    - [國立東華大學KMS工具](http://software.ndhu.edu.tw/NDHU_KMS.exe)（選用）
 
 7. 設置「檔案總管」、「設定」與「Windows 安全性」的選項
 
@@ -281,13 +281,13 @@
     - [Scripts/Install-ProgramsOfMicrosoftOffice.ps1](Scripts/Install-ProgramsOfMicrosoftOffice.ps1)
 
 4. 安裝平常使用的應用程式，以管理員身分執行：
-    - [Scripts/Install-ProgramsCommonlyUsed.ps1](Scripts/Install-Install-ProgramsCommonlyUsed.ps1)
+    - [Scripts/Install-ProgramsCommonlyUsed.ps1](Scripts/Install-ProgramsCommonlyUsed.ps1)
 
 5. （可選）安裝用於特定裝置的應用程式，以管理員身分執行：
     - [Scripts/Install-ProgramsForMainDevice.ps1](Scripts/Install-ProgramsForMainDevice.ps1)（僅限主要裝置）
     - [Scripts/Install-ProgramsForGamingDevice.ps1](Scripts/Install-ProgramsForGamingDevice.ps1)（僅限遊戲裝置）
 
 6. （可選）安裝只有需要時才會安裝的應用程式，用「記事本」打開以下腳本並複製需要的行在「PowerShell」中執行：
-    - [Scripts/Install-ProgramsSeldomUsed](Scripts/Install-ProgramsSeldomUsed)
+    - [Scripts/Install-ProgramsSeldomUsed](Scripts/Install-ProgramsSeldomUsed.ps1)
 
 7. 逐一開啟應用程式進行設置
