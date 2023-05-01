@@ -10,6 +10,7 @@ Install-WingetPackage --id=9MSPC6MP8FM4 # Microsoft Whiteboard
 Install-WingetPackage --id=9MTFTXSJ9M7F # RoundedTB
 Install-WingetPackage --id=9NBLGGH4Z1JC # Speedtest by Ookla
 # Install-WingetPackage --id=9PF4KZ2VN4W9 # TranslucentTB # FIXME: https://github.com/TranslucentTB/TranslucentTB/issues/537
+# Install-WingetPackage --id=9MT60QV066RP # ModernFlyouts # FIXME: https://github.com/ModernFlyouts-Community/ModernFlyouts/issues/1153
 # Install-WingetPackage --id=9NBHCS1LX4R0 # paint.net # FIXME: server error https://github.com/microsoft/winget-cli/issues/908
 Install-WingetPackage --id=7zip.7zip
 Install-WingetPackage --id=AntibodySoftware.WizTree
@@ -26,11 +27,11 @@ Install-WingetPackage --id=Microsoft.PowerToys
 Install-WingetPackage --id=Nilesoft.Shell
 Install-WingetPackage --id=QL-Win.QuickLook # has Microsoft Store version but with limited features
 Install-WingetPackage --id=Surfshark.Surfshark
-Install-WingetPackage --id=gurnec.HashCheckShellExtension
 Install-WingetPackage --id=qBittorrent.qBittorrent
 Install-WingetPackage --id=rcmaehl.MSEdgeRedirect --scope=machine # must to install in admin mode
 Invoke-ProgramFromWebpageWithUrlPattern "https://www.foobar2000.org/encoderpack" "/getfile/Free_Encoder_Pack-*.exe" "/getfile" "/files" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98378
 Invoke-ProgramFromWebpageWithUrlPattern "https://codecguide.com/download_other.htm#mediainfo" "https://files*.codecguide.com/MediaInfoLite*.exe" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98379
+# HashCheck # https://github.com/idrassi/HashCheck/releases # FIXME: https://github.com/microsoft/winget-pkgs/issues/99329
 # TrafficMonitor # https://github.com/zhongyang219/TrafficMonitor/releases
 
 $Aida64LanguageFile = "${Env:ProgramFiles(x86)}\FinalWire\AIDA64 Extreme\Language\lang_tw.txt"

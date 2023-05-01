@@ -99,7 +99,8 @@
 
     :::info
 
-    安裝「clink」時，取消勾選「Autorun when cmd.exe starts」選項即可，其他維持
+    - 安裝「Git」時，在「Select Components」除了「Add a Git Bash Profile to Windows Terminal」以外全部勾選，在「Choosing the SSH executable」選擇「Use external OpenSSH」選項
+    - 安裝「clink」時，取消勾選「Autorun when cmd.exe starts」選項即可，其他維持
 
     :::
 
@@ -187,16 +188,12 @@
     - 設置「Microsoft Edge」的實驗性功能
         1. 進入「[edge://flags](edge://flags)」頁面
         2. 將下列旗標的選項設置為「Enabled」
-            - `#edge-visual-rejuv-mica`
-            - `#edge-visual-rejuv-mica`
-            - `#edge-overlay-scrollbars-win-style`
-            - `#edge-visual-rejuv-materials-menu`
+            - `#edge-overlay-scrollbars-win-style`: Enabled in Settings（需額外至「設定→外觀→自訂瀏覽器」關閉「永遠顯示捲軸」）
+            - `#edge-visual-rejuv-materials-menu`（非必要，理論上預設就有）
+            - `#edge-visual-rejuv-mica`（被移除了？）
+            - `#edge-visual-rejuv-rounded-tabs`
+            - `#enable-parallel-downloading`
 
-    - 在「Microsoft Edge」中安裝以下網站應用程式：
-        - Chrome Remote Desktop：<https://remotedesktop.google.com/>
-        - PowerPanel Business Local：<http://localhost:3052/>
-        - Spotify Release List：<https://spotifyreleaselist.netlify.app/>
-        - アイドルマスター シャイニーカラーズ：<https://shinycolors.enza.fun/>
     :::
 
 3. 到「設定」的「應用程式 → 預設應用程式」，將安裝好的應用程式按表格順序設為預設的打開方式
@@ -256,7 +253,6 @@
     :::info
 
     - 安裝「Visual Studio Code」時，將選項全部勾選
-    - 安裝「Git」時，在「Select Components」除了「Add a Git Bash Profile to Windows Terminal」以外全部勾選，在「Choosing the SSH executable」選擇「Use external OpenSSH」選項
 
     :::
 
@@ -284,10 +280,16 @@
     - [Scripts/Install-ProgramsCommonlyUsed.ps1](Scripts/Install-ProgramsCommonlyUsed.ps1)
 
 5. （可選）安裝用於特定裝置的應用程式，以管理員身分執行：
-    - [Scripts/Install-ProgramsForMainDevice.ps1](Scripts/Install-ProgramsForMainDevice.ps1)（僅限主要裝置）
+    - [Scripts/Install-ProgramsForPrimaryDevice.ps1](Scripts/Install-ProgramsForPrimaryDevice.ps1)（僅限主要裝置）
     - [Scripts/Install-ProgramsForGamingDevice.ps1](Scripts/Install-ProgramsForGamingDevice.ps1)（僅限遊戲裝置）
 
 6. （可選）安裝只有需要時才會安裝的應用程式，用「記事本」打開以下腳本並複製需要的行在「PowerShell」中執行：
     - [Scripts/Install-ProgramsSeldomUsed](Scripts/Install-ProgramsSeldomUsed.ps1)
 
-7. 逐一開啟應用程式進行設置
+7. 在「Microsoft Edge」中安裝以下網站應用程式：
+    - Chrome Remote Desktop：<https://remotedesktop.google.com/>
+    - PowerPanel Business Local：<http://localhost:3052/>
+    - Spotify Release List：<https://spotifyreleaselist.netlify.app/>
+    - アイドルマスター シャイニーカラーズ：<https://shinycolors.enza.fun/>
+
+8. 逐一開啟應用程式進行設置

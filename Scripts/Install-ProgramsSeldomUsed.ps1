@@ -9,6 +9,7 @@ Install-WingetPackage --id=9MVVSZK43QQW # draw.io Diagrams
 Install-WingetPackage --id=XP8BT8DW290MPQ # Microsoft Teams (work or school)
 Install-WingetPackage --id=Audacity.Audacity
 Install-WingetPackage --id=Citrix.Workspace # has Microsoft Store version but with limited features
+Install-WingetPackage --id=LIGHTNINGUK.ImgBurn # has Microsoft Store version but not offical
 Install-WingetPackage --id=Piriform.Recuva --interactive
 Install-WingetPackage --id=PrimateLabs.Geekbench.5
 Install-WingetPackage --id=PrimateLabs.Geekbench.6

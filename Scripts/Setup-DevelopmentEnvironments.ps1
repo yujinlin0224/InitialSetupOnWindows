@@ -1,6 +1,7 @@
 pnpm env use --global lts
 pnpm add --global prettier cspell yarn
 flutter doctor --android-licenses
+dart --disable-analytics
 conda config --set channel_priority strict
 conda update --all --yes
 conda create --name dev --yes python

@@ -2,6 +2,7 @@
 
 Install-WingetPackage --id=9N0866FS04W8 # Dolby Access
 Install-WingetPackage --id=9PLFNLNT3G5G # Intel Graphics Command Center
+Install-WingetPackage --id=9N4TV0SXLNMT # Intel Software Guard Extensions Activation App
 Install-WingetPackage --id=9PP9GZM2GN26 # Intel Unison
 Install-WingetPackage --id=9NVMNJCR03XV # MSI Center
 Install-WingetPackage --id=9NF8H0H7WMLT # NVIDIA Control Panel

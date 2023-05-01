@@ -24,6 +24,8 @@
 	commit = false
 [pull]
 	ff = only
+[safe]
+	directory = *
 [user]
 	name = Yùjǐn Lín
 	email = yujinlin0224@outlook.com
