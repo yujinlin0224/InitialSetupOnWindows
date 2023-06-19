@@ -1,16 +1,9 @@
 . .\utils.ps1
 
-$WingetPackageIdOfGoLangGo = (
-    winget search --id=GoLang.Go |
-        Select-String -Pattern "GoLang\.Go\.\d+\.\d+" |
-        ForEach-Object { $_.Matches.Value } |
-        Sort-Object |
-        Select-Object -Last 1
-)
-
-Install-WingetPackage --id=$WingetPackageIdOfGoLangGo
+Install-WingetPackage --id=9N8MHTPHNGVV # Dev Home (Preview)
 Install-WingetPackage --id=Anaconda.Miniconda3 --scope=user
 Install-WingetPackage --id=Docker.DockerDesktop
+Install-WingetPackage --id=GoLang.Go
 Install-WingetPackage --id=Google.AndroidStudio
 Install-WingetPackage --id=Microsoft.VisualStudioCode --scope=user --interactive
 Invoke-WebRequest https://get.pnpm.io/install.ps1 | Invoke-Expression

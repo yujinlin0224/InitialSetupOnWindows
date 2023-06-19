@@ -22,7 +22,7 @@
     "Microsoft.XboxSpeechToTextOverlay"
     "Microsoft.ZuneMusic"
     "Microsoft.ZuneVideo"
-    "MicrosoftCorporationII.QuickAssist"
+    # "MicrosoftCorporationII.QuickAssist"
     "MicrosoftTeams"
     "microsoft.windowscommunicationsapps"
 ).ForEach({ Get-AppxPackage $_ | Remove-AppxPackage })

@@ -25,11 +25,11 @@ Install-WingetPackage --id=LINE.LINE # has Microsoft Store version but with limi
 Install-WingetPackage --id=MicaForEveryone.MicaForEveryone --scope=machine
 Install-WingetPackage --id=Microsoft.PowerToys
 Install-WingetPackage --id=Nilesoft.Shell
+Install-WingetPackage --id=PeterPawlowski.foobar2000.EncoderPack
 Install-WingetPackage --id=QL-Win.QuickLook # has Microsoft Store version but with limited features
 Install-WingetPackage --id=Surfshark.Surfshark
 Install-WingetPackage --id=qBittorrent.qBittorrent
 Install-WingetPackage --id=rcmaehl.MSEdgeRedirect --scope=machine # must to install in admin mode
-Invoke-ProgramFromWebpageWithUrlPattern "https://www.foobar2000.org/encoderpack" "/getfile/Free_Encoder_Pack-*.exe" "/getfile" "/files" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98378
 Invoke-ProgramFromWebpageWithUrlPattern "https://codecguide.com/download_other.htm#mediainfo" "https://files*.codecguide.com/MediaInfoLite*.exe" # FIXME: https://github.com/microsoft/winget-pkgs/issues/98379
 # HashCheck # https://github.com/idrassi/HashCheck/releases # FIXME: https://github.com/microsoft/winget-pkgs/issues/99329
 # TrafficMonitor # https://github.com/zhongyang219/TrafficMonitor/releases

@@ -202,7 +202,13 @@
     - 設置「Microsoft Edge」的實驗性功能
         1. 進入「[edge://flags](edge://flags)」頁面
         2. 將下列旗標的選項設置為「Enabled」
+            - `#edge-minimal-toolbar`
             - `#edge-overlay-scrollbars-win-style`: Enabled in Settings（需額外至「設定→外觀→自訂瀏覽器」關閉「永遠顯示捲軸」）
+            - `#edge-project-kodiak-look-and-feel`
+            - `#edge-project-kodiak-policy-filter`
+            - `#edge-project-kodiak`
+            - `#edge-rounded-containers`
+            - `#edge-split-screen`
             - `#edge-visual-rejuv-materials-menu`（非必要，理論上預設就有）
             - `#edge-visual-rejuv-mica`（被移除了？）
             - `#edge-visual-rejuv-rounded-tabs`
@@ -301,6 +307,7 @@
     - [Scripts/Install-ProgramsSeldomUsed](Scripts/Install-ProgramsSeldomUsed.ps1)
 
 7. 在「Microsoft Edge」中安裝以下網站應用程式：
+    - rDrop：<https://rdrop.link/>
     - Chrome Remote Desktop：<https://remotedesktop.google.com/>
     - PowerPanel Business Local：<http://localhost:3052/>
     - Spotify Release List：<https://spotifyreleaselist.netlify.app/>
