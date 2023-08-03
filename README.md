@@ -40,7 +40,6 @@
     - [Scripts/Disable-IdlePowerStateOfNvidiaHdAudioDriver.ps1](Scripts/Disable-IdlePowerStateOfNvidiaHdAudioDriver.ps1)（禁用NVIDIA音效驅動的閒置電源模式）
     - [Scripts/Make-MouseScrollingNaturally.ps1](Scripts/Make-MouseScrollingNaturally.ps1)（讓所有滑鼠使用自然的方式滾動）
     - [Scripts/Remove-LibrariesInFileExplorer.ps1](Scripts/Remove-LibrariesInFileExplorer.ps1)（移除檔案總管中的媒體庫）
-    - [Scripts/Show-SecondsInTeakbarClock.ps1](Scripts/Show-SecondsInTeakbarClock.ps1)（在工作列上顯示秒數，「設定」有選項後就棄用）
 
 6. 確保Windows授權有啟用
     - [國立東華大學KMS工具](http://software.ndhu.edu.tw/NDHU_KMS.exe)（選用）
@@ -57,10 +56,30 @@
             - IPv4：開啟
             - 慣用的DNS：94.140.14.14
             - HTTPS上的DNS：啟動（手動範本）
-            - HTTPS範本上的DNS：https://dns.adguard-dns.com/dns-query
+            - HTTPS範本上的DNS：<https://dns.adguard-dns.com/dns-query>
             - 其他DNS：94.140.15.15
             - HTTPS上的DNS：啟動（手動範本）
-            - HTTPS範本上的DNS：https://dns.adguard-dns.com/dns-query
+            - HTTPS範本上的DNS：<https://dns.adguard-dns.com/dns-query>
+            - IPv6：開啟
+            - 慣用的DNS：2a10:50c0::ad1:ff
+            - HTTPS上的DNS：啟動（手動範本）
+            - HTTPS範本上的DNS：<https://dns.adguard-dns.com/dns-query>
+            - 其他DNS：2a10:50c0::ad2:ff
+            - HTTPS上的DNS：啟動（手動範本）
+            - HTTPS範本上的DNS：<https://dns.adguard-dns.com/dns-query>
+        5. 用系統管理員權限在「PowerShell」中執行以下腳本針對特定網站使用中華電信DNS：
+
+           ```powershell
+            Add-DnsClientNrptRule -Namespace "pixiv.net" -NameServers "168.95.192.1"
+            Add-DnsClientNrptRule -Namespace "twitter.com" -NameServers "168.95.192.1"
+           ```
+
+        6. 用系統管理員權限在「PowerShell」中執行以下腳本針對特定域名進行阻擋：
+
+           ```powershell
+            Add-DnsClientNrptRule -Namespace ".mov" -NameServers "0.0.0.0"
+            Add-DnsClientNrptRule -Namespace ".zip" -NameServers "0.0.0.0"
+           ```
 
     - 設置切換輸入法的快速鍵
         1. 使用`Win+R`快速鍵開啟執行視窗並執行`rundll32 Shell32.dll,Control_RunDLL input.dll,,{C07337D3-DB2C-4D0B-9A93-B722A6C106E2}{HOTKEYS}`指令，打開「文字服務和輸入語言」視窗
@@ -77,9 +96,9 @@
         6. 勾選所有「將目前設定複製到：」下的選項後，按下「確定」按鈕
 
     - 禁用驅動程式的自動更新
-        7. 使用`Win+R`快速鍵開啟執行視窗並執行 `SystemPropertiesHardware` 指令，打開「系統內容」視窗
-        8. 在「硬體」分頁中按下「裝置安裝設定」按鈕，打開「裝置安裝設定」視窗
-        9. 選擇「否（您的裝置可能無法如預期般運作）」後，按下「儲存變更」按鈕
+        1. 使用`Win+R`快速鍵開啟執行視窗並執行 `SystemPropertiesHardware` 指令，打開「系統內容」視窗
+        2. 在「硬體」分頁中按下「裝置安裝設定」按鈕，打開「裝置安裝設定」視窗
+        3. 選擇「否（您的裝置可能無法如預期般運作）」後，按下「儲存變更」按鈕
 
     :::
 

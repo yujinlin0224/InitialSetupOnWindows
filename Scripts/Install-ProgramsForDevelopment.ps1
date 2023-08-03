@@ -1,6 +1,6 @@
 . .\utils.ps1
 
-Install-WingetPackage --id=9N8MHTPHNGVV # Dev Home (Preview)
+# Install-WingetPackage --id=9N8MHTPHNGVV # Dev Home (Preview)
 Install-WingetPackage --id=Anaconda.Miniconda3 --scope=user
 Install-WingetPackage --id=Docker.DockerDesktop
 Install-WingetPackage --id=GoLang.Go

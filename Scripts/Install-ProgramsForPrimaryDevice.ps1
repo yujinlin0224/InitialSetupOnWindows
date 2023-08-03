@@ -1,5 +1,6 @@
 . .\utils.ps1
 
+Install-WingetPackage --id=9NTM2QC6QWS7 # Lively Wallpaper
 Install-WingetPackage --id=9PC3H3V7Q9CH # Rufus
 Install-WingetPackage --id=AndreWiethoff.ExactAudioCopy
 Install-WingetPackage --id=AntoineAflalo.SoundSwitch --scope=machine

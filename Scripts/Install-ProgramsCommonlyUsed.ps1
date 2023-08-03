@@ -9,6 +9,7 @@ Install-WingetPackage --id=9WZDNCRFJ3PS # Microsoft Remote Desktop
 Install-WingetPackage --id=9MSPC6MP8FM4 # Microsoft Whiteboard
 Install-WingetPackage --id=9MTFTXSJ9M7F # RoundedTB
 Install-WingetPackage --id=9NBLGGH4Z1JC # Speedtest by Ookla
+# Install-WingetPackage --id=9P1HQ5TQZMGD # Microsoft Loop # FIXME: just a wrapper of PWA in Microsoft Edge and cannot pin to taskbar properly
 # Install-WingetPackage --id=9PF4KZ2VN4W9 # TranslucentTB # FIXME: https://github.com/TranslucentTB/TranslucentTB/issues/537
 # Install-WingetPackage --id=9MT60QV066RP # ModernFlyouts # FIXME: https://github.com/ModernFlyouts-Community/ModernFlyouts/issues/1153
 # Install-WingetPackage --id=9NBHCS1LX4R0 # paint.net # FIXME: server error https://github.com/microsoft/winget-cli/issues/908
